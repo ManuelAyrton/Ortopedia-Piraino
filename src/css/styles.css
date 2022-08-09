@@ -10937,13 +10937,14 @@ body {
   background-size: cover;
   margin: 0;
   width: 100%;
+  min-height: 100vh;
 }
 
 .navbar {
   z-index: 100;
   font-weight: 300;
-  -webkit-backdrop-filter: blur(0.5rem);
-          backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(1em);
+          backdrop-filter: blur(1em);
   box-shadow: 1px 1px 25px -7px #212529;
   border-radius: 20px;
   margin: 10px;
@@ -10980,17 +10981,17 @@ img.logoImg {
 
 #navbarNavDropdown {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(190, 212, 255, 0.9);
   border-radius: 20px;
 }
 
 .dropdown-menu {
   width: 200px;
   box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.4901960784);
-  -webkit-backdrop-filter: blur(0.5rem);
-          backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
   margin: auto;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   border: 0;
   box-shadow: 1px 1px 25px -5px rgba(51, 51, 51, 0.4901960784);
@@ -11020,8 +11021,8 @@ img.logoImg {
   margin: 10px;
   font-weight: 300;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(0.5rem);
-          backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
   box-shadow: 1px 1px 25px -7px #212529;
   border-radius: 20px;
   z-index: 1;
@@ -11069,7 +11070,7 @@ img.logoImg {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.229);
   box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.49);
-  padding: 0.2rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 15px;
   transition: all 0.2s ease-in-out 0s;
 }
@@ -11082,8 +11083,12 @@ img.logoImg {
 }
 
 @media all and (min-width: 768px) {
+  .carousel-item {
+    max-height: 40vh;
+  }
   #footer {
-    position: fixed;
+    position: absolute;
+    bottom: 0;
   }
   #footer div.ftr-title-contact {
     text-align: start;
@@ -11102,7 +11107,7 @@ img.logoImg {
     border-radius: none;
   }
   .dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.4901960784);
     margin-left: -47px;
