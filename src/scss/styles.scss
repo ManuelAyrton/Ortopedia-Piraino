@@ -4,7 +4,8 @@ $secondary: rgb(246, 248, 253);
 $info: rgb(21, 52, 134);
 $success: rgb(255, 212, 212);
 $danger: rgba(51, 51, 51, 0.49);
-$box-shadow: 1px 1px 25px -7px $danger;
+$box-shadow-button: 1px 1px 25px -7px $danger;
+$box-shadow: 1px 1px 25px -7px #43434383;
 
 //import bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
@@ -12,103 +13,99 @@ $box-shadow: 1px 1px 25px -7px $danger;
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: 'Comfortaa', sans-serif;
-    background-image: url('../media/bgSVG.svg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
+	font-family: 'Comfortaa', sans-serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+	width: 100%;
+	min-height: 100vh;
 
 }
 
 // INICIO DE NAVBAR
 .navbar {
-    z-index: 100;
-    font-weight: 300;
-    backdrop-filter: blur(1em);
-    box-shadow: 1px 1px 25px -7px $dark;
-    border-radius: 20px;
-    margin: 10px;
-    height: 85px;
-    background-color: rgba(255, 255, 255, 0.249);
+	z-index: 100;
+	font-weight: 300;
+	backdrop-filter: blur(1em);
+	box-shadow: 1px 1px 15px -7px ;
+	margin-bottom: 20px;
+	height: 85px;
+	background-color: rgba(1, 1, 1, 0.05);
 }
 
 img.logoImg {
-    height: 60px;
+	height: 60px;
 }
 
 .button-hover {
-    &-servicios {
-        transition: 0.2s ease-in-out 0s;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+	&-servicios {
+		transition: 0.2s ease-in-out 0s;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
 
-        &:hover {
-            opacity: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
+		&:hover {
+			opacity: 100%;
+			background-color: rgba(255, 255, 255, 0.5);
 
-        }
+		}
 
-    }
+	}
 
-    &-nosotros {
-        transition: 0.2s ease-in-out 0s;
+	&-nosotros {
+		transition: 0.2s ease-in-out 0s;
 
-        &:hover {
-            opacity: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
+		&:hover {
+			opacity: 100%;
+			background-color: rgba(255, 255, 255, 0.5);
 
-        }
-    }
+		}
+	}
 
 }
 
 .navbar-toggler {
-    height: 50px;
-    border-radius: 10px;
-    border: none;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
 }
 
 #navbarNavDropdown {
-    text-align: center;
-    background-color: rgba(190, 212, 255, 0.9);
-    border-radius: 20px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 20px;
 }
 
 .dropdown-menu {
-    width: 200px;
-    box-shadow: 1px 1px 25px -7px #3333337d;
-    backdrop-filter: blur(1rem);
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    border: 0;
-    box-shadow: 1px 1px 25px -5px #3333337d;
+	width: 200px;
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 20px;
+	border: 0;
+	box-shadow: 1px 1px 25px -5px #3333337d;
 }
 
 .dropdown-item {
-    font-weight: 300;
-    transition: all 0.2s ease-in-out 0s;
+	font-weight: 300;
+	transition: all 0.2s ease-in-out 0s;
 }
 
 .button-contact {
-    font-weight: 700;
-    background-color: rgba(255, 212, 212, 0.501);
-    padding: 0 1rem;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transition: all 0.2s ease-in-out 0s;
+	font-weight: 700;
+	background-color: rgba(255, 212, 212, 0.501);
+	padding: 0 1rem;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	transition: all 0.2s ease-in-out 0s;
 
-    &:hover {
-        background-color: rgb(255, 212, 212);
-    }
+	&:hover {
+		background-color: rgb(255, 212, 212);
+	}
 
 
 }
@@ -116,169 +113,197 @@ img.logoImg {
 // FIN DE NAVBAR
 
 // INICIO DE CONTENT
+#carouselExampleCaptions {
+	border-radius: 15px;
+
+
+	.carousel-inner {
+		border-radius: 15px;
+		background-color: rgb(0, 0, 0);
+		height: 50vh;
+
+		.carousel-item {
+			height: 50vh;
+
+			& img {
+				opacity: 0.7;
+				margin: auto;
+			}
+
+			div.carousel-caption {
+				h5 {
+					color: $success;
+					font-size: 2rem;
+					font-weight: 700;
+					text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+				}
+
+				p {
+					font-weight: 300;
+					font-size: 0.8rem;
+					text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+				}
+			}
+		}
+	}
+}
 
 // FIN DE CONTENT
 
 // INICIO DE FOOTER
 #footer {
-    position: relative;
-    width: calc(100% - 20px);
-    bottom: 0;
-    margin: 10px;
-    font-weight: 300;
-    background-color: rgba(0, 0, 0, 0.10);
-    backdrop-filter: blur(1rem);
-    box-shadow: 1px 1px 25px -7px $dark;
-    border-radius: 20px;
-    z-index: 1;
+	position: static;
+	width: 100%;
+	bottom: 0;
+	margin-top: 10px;
+	font-weight: 300;
+	background-color: rgba(0, 0, 0, 0.10);
+	backdrop-filter: blur(1rem);
+	box-shadow: $box-shadow;
+	z-index: 1;
 
-    & div.ftr-title {
+	& div.ftr-title {
 
-        &-contact,
-        &-explore,
-        &-social {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: $success;
-            margin: 10px 0 20px 0;
-            text-align: center;
+		&-contact,
+		&-explore,
+		&-social {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: $info;
+			margin: 10px 0 20px 0;
+			text-align-last: center;
 
-            & ul {
-                padding: 0;
-                margin: 0;
+			& ul {
+				padding: 0;
+				margin: 0;
 
-                & li {
-                    list-style-type: none;
-                    margin: none;
-                    color: black;
-                    font-weight: 300;
-                    font-size: 0.9rem;
+				& li {
+					list-style-type: none;
+					margin: none;
+					color: black;
+					font-weight: 300;
+					font-size: 0.9rem;
 
-                    & i {
-                        color: $info;
-                    }
+					& i {
+						color: $info;
+					}
 
-                    & a {
-                        cursor: pointer;
-                        display: inline-block;
-
+					& a {
+						cursor: pointer;
+						display: inline-block;
 
 
-                        &.button-ftr {
-                            text-decoration: none !important;
-                            color: $info;
-                            font-weight: 500;
-                            padding: 0.5rem 1rem;
-                            transition: all 0.2s ease-in-out 0s;
-                            background-color: rgba(255, 212, 212, 0.7);
-                            box-shadow: $box-shadow;
-                            border-radius: 15px;
 
-                            &:hover {
-                                // transform: scale(1.05)!important;
-                                background-color: rgb(255, 212, 212);
-                                transform: scale(1.05) !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+						&.button-ftr {
+							text-decoration: none !important;
+							color: $info;
+							font-weight: 500;
+							padding: 0.5rem 1rem;
+							transition: all 0.2s ease-in-out 0s;
+							background-color: rgba(255, 212, 212, 0.7);
+							box-shadow: $box-shadow-button;
+							border-radius: 15px;
 
-        &-social>ul>li>a {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.229);
-            box-shadow: $box-shadow;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            transition: all 0.2s ease-in-out 0s;
+							&:hover {
+								// transform: scale(1.05)!important;
+								background-color: rgb(255, 212, 212);
+								transform: scale(1.05) !important;
+							}
+						}
+					}
+				}
+			}
+		}
 
-            &:hover {
-                transform: scale(1.05);
-            }
+		&-social>ul>li>a {
+			display: inline-block;
+			background-color: rgba(255, 255, 255, 0.229);
+			box-shadow: $box-shadow-button;
+			padding: 0.25rem 0.75rem;
+			border-radius: 15px;
+			transition: all 0.2s ease-in-out 0s;
 
-            & i {
-                vertical-align: -0.125em;
-                font-size: 1.3em;
-            }
-        }
-    }
+			&:hover {
+				transform: scale(1.05);
+			}
+
+			& i {
+				vertical-align: -0.125em;
+				font-size: 1.3em;
+			}
+		}
+	}
 }
 
 // FIN DE FOOTER
 
 @media all and (min-width: 768px) {
 
-    .carousel-item{
-        max-height: 40vh;
-    }
+	// INICIO DE CONTENT
+	}
 
-    // INICIO DE FOOTER
-    #footer {
-        position: absolute;
-        bottom: 0;
+// FIN DE CONTENT
 
-        & div.ftr-title {
-            &-contact {
-                text-align: start;
-            }
-
-            &-explore {
-                text-align: center;
-            }
-
-            &-social {
-                text-align: end;
-            }
-        }
-    }
-    // FIN DE FOOTER
-
+// INICIO DE FOOTER
+#footer {
+	position: relative;
+	bottom: 0;
 }
+
+// FIN DE FOOTER
 
 @media all and (min-width: 992px) {
-    #navbarNavDropdown {
-        background-color: transparent;
-        box-shadow: none;
-        border-radius: none;
-    }
 
-    .dropdown-menu {
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
-        box-shadow: 1px 1px 25px -7px #3333337d;
-        margin-left: -47px;
-    }
+	// INICIO DE HEADER
+	#navbarNavDropdown {
+		background-color: transparent;
+		box-shadow: none;
+		border-radius: none;
+	}
 
-    .dropdown-item {
+	.dropdown-menu {
+		background-color: rgba(255, 255, 255, 0.9);
+		border-radius: 15px;
+		box-shadow: 1px 1px 25px -7px #3333337d;
+		margin-left: -47px;
+	}
 
-        // &-top{
-        //     margin-top: 222px;
-        // }
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-    }
+	.dropdown-item {
 
-    .button-hover {
-        &-servicios {
-            border-radius: 15px;
-        }
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
 
-        &-nosotros {
-            border-radius: 15px;
-            margin: 0 20px;
-        }
-    }
+	// FIN DE HEADER
 
-    .button-contact {
-        background-color: rgba(255, 212, 212, 0.7);
-        box-shadow: $box-shadow;
-        border-radius: 15px;
+	// INICIO DE CONTENT
 
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
+	// FIN DE CONTENT 
+
+	// INICIO DE FOOTER
+
+	.button-hover {
+		&-servicios {
+			border-radius: 15px;
+		}
+
+		&-nosotros {
+			border-radius: 15px;
+			margin: 0 20px;
+		}
+	}
+
+	.button-contact {
+		background-color: rgba(255, 212, 212, 0.7);
+		box-shadow: $box-shadow-button;
+		border-radius: 15px;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 
 }
+
+// FIN DE FOOTER

@@ -3273,7 +3273,7 @@ textarea.form-control-lg {
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
-  --bs-dropdown-box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.49);
+  --bs-dropdown-box-shadow: 1px 1px 25px -7px rgba(67, 67, 67, 0.5137254902);
   --bs-dropdown-link-color: #212529;
   --bs-dropdown-link-hover-color: #1e2125;
   --bs-dropdown-link-hover-bg: #e9ecef;
@@ -5228,7 +5228,7 @@ textarea.form-control-lg {
   --bs-toast-border-width: 1px;
   --bs-toast-border-color: var(--bs-border-color-translucent);
   --bs-toast-border-radius: 0.375rem;
-  --bs-toast-box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.49);
+  --bs-toast-box-shadow: 1px 1px 25px -7px rgba(67, 67, 67, 0.5137254902);
   --bs-toast-header-color: #6c757d;
   --bs-toast-header-bg: rgba(255, 255, 255, 0.85);
   --bs-toast-header-border-color: rgba(0, 0, 0, 0.05);
@@ -5435,7 +5435,7 @@ textarea.form-control-lg {
 @media (min-width: 576px) {
   .modal {
     --bs-modal-margin: 1.75rem;
-    --bs-modal-box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.49);
+    --bs-modal-box-shadow: 1px 1px 25px -7px rgba(67, 67, 67, 0.5137254902);
   }
   .modal-dialog {
     max-width: var(--bs-modal-width);
@@ -5688,7 +5688,7 @@ textarea.form-control-lg {
   --bs-popover-border-color: var(--bs-border-color-translucent);
   --bs-popover-border-radius: 0.5rem;
   --bs-popover-inner-border-radius: calc(0.5rem - 1px);
-  --bs-popover-box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.49);
+  --bs-popover-box-shadow: 1px 1px 25px -7px rgba(67, 67, 67, 0.5137254902);
   --bs-popover-header-padding-x: 1rem;
   --bs-popover-header-padding-y: 0.5rem;
   --bs-popover-header-font-size: 1rem;
@@ -7133,7 +7133,7 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.49) !important;
+  box-shadow: 1px 1px 25px -7px rgba(67, 67, 67, 0.5137254902) !important;
 }
 
 .shadow-sm {
@@ -10931,7 +10931,6 @@ textarea.form-control-lg {
 
 body {
   font-family: "Comfortaa", sans-serif;
-  background-image: url("../media/bgSVG.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -10945,11 +10944,10 @@ body {
   font-weight: 300;
   -webkit-backdrop-filter: blur(1em);
           backdrop-filter: blur(1em);
-  box-shadow: 1px 1px 25px -7px #212529;
-  border-radius: 20px;
-  margin: 10px;
+  box-shadow: 1px 1px 15px -7px;
+  margin-bottom: 20px;
   height: 85px;
-  background-color: rgba(255, 255, 255, 0.249);
+  background-color: rgba(1, 1, 1, 0.05);
 }
 
 img.logoImg {
@@ -10981,15 +10979,12 @@ img.logoImg {
 
 #navbarNavDropdown {
   text-align: center;
-  background-color: rgba(190, 212, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
 }
 
 .dropdown-menu {
   width: 200px;
-  box-shadow: 1px 1px 25px -7px rgba(51, 51, 51, 0.4901960784);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
   margin: auto;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
@@ -11014,25 +11009,52 @@ img.logoImg {
   background-color: rgb(255, 212, 212);
 }
 
+#carouselExampleCaptions {
+  border-radius: 15px;
+}
+#carouselExampleCaptions .carousel-inner {
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0);
+  height: 50vh;
+}
+#carouselExampleCaptions .carousel-inner .carousel-item {
+  height: 50vh;
+}
+#carouselExampleCaptions .carousel-inner .carousel-item img {
+  opacity: 0.7;
+  margin: auto;
+}
+#carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption h5, #carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption .h5 {
+  color: rgb(255, 212, 212);
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+#carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption p {
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
 #footer {
-  position: relative;
-  width: calc(100% - 20px);
+  position: static;
+  width: 100%;
   bottom: 0;
-  margin: 10px;
+  margin-top: 10px;
   font-weight: 300;
   background-color: rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
-  box-shadow: 1px 1px 25px -7px #212529;
-  border-radius: 20px;
+  box-shadow: 1px 1px 25px -7px rgba(67, 67, 67, 0.5137254902);
   z-index: 1;
 }
 #footer div.ftr-title-contact, #footer div.ftr-title-explore, #footer div.ftr-title-social {
   font-size: 1.5rem;
   font-weight: 700;
-  color: rgb(255, 212, 212);
+  color: rgb(21, 52, 134);
   margin: 10px 0 20px 0;
-  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 #footer div.ftr-title-contact ul, #footer div.ftr-title-explore ul, #footer div.ftr-title-social ul {
   padding: 0;
@@ -11082,24 +11104,11 @@ img.logoImg {
   font-size: 1.3em;
 }
 
-@media all and (min-width: 768px) {
-  .carousel-item {
-    max-height: 40vh;
-  }
-  #footer {
-    position: absolute;
-    bottom: 0;
-  }
-  #footer div.ftr-title-contact {
-    text-align: start;
-  }
-  #footer div.ftr-title-explore {
-    text-align: center;
-  }
-  #footer div.ftr-title-social {
-    text-align: end;
-  }
+#footer {
+  position: relative;
+  bottom: 0;
 }
+
 @media all and (min-width: 992px) {
   #navbarNavDropdown {
     background-color: transparent;
