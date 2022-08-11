@@ -10931,15 +10931,13 @@ textarea.form-control-lg {
 
 body {
   font-family: "Comfortaa", sans-serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   margin: 0;
   width: 100%;
   min-height: 100vh;
 }
 
 .navbar {
+  position: fixed;
   z-index: 100;
   font-weight: 300;
   -webkit-backdrop-filter: blur(1em);
@@ -10947,7 +10945,8 @@ body {
   box-shadow: 1px 1px 15px -7px;
   margin-bottom: 20px;
   height: 85px;
-  background-color: rgba(1, 1, 1, 0.05);
+  width: 100%;
+  background-color: rgba(221, 221, 221, 0.738);
 }
 
 img.logoImg {
@@ -10973,8 +10972,9 @@ img.logoImg {
 
 .navbar-toggler {
   height: 50px;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
+  background-color: rgb(255, 212, 212);
 }
 
 #navbarNavDropdown {
@@ -11009,28 +11009,31 @@ img.logoImg {
   background-color: rgb(255, 212, 212);
 }
 
-#carouselExampleCaptions {
+#content {
+  margin-top: 105px;
+}
+#content #carouselExampleCaptions {
   border-radius: 15px;
 }
-#carouselExampleCaptions .carousel-inner {
+#content #carouselExampleCaptions .carousel-inner {
   border-radius: 15px;
   background-color: rgb(0, 0, 0);
   height: 50vh;
 }
-#carouselExampleCaptions .carousel-inner .carousel-item {
+#content #carouselExampleCaptions .carousel-inner .carousel-item {
   height: 50vh;
 }
-#carouselExampleCaptions .carousel-inner .carousel-item img {
+#content #carouselExampleCaptions .carousel-inner .carousel-item img {
   opacity: 0.7;
   margin: auto;
 }
-#carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption h5, #carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption .h5 {
+#content #carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption h5, #content #carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption .h5 {
   color: rgb(255, 212, 212);
   font-size: 2rem;
   font-weight: 700;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
-#carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption p {
+#content #carouselExampleCaptions .carousel-inner .carousel-item div.carousel-caption p {
   font-weight: 300;
   font-size: 0.8rem;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);

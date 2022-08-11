@@ -19,9 +19,6 @@ $box-shadow: 1px 1px 25px -7px #43434383;
 
 body {
 	font-family: 'Comfortaa', sans-serif;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
 	margin: 0;
 	width: 100%;
 	min-height: 100vh;
@@ -30,13 +27,15 @@ body {
 
 // INICIO DE NAVBAR
 .navbar {
+	position: fixed;
 	z-index: 100;
 	font-weight: 300;
 	backdrop-filter: blur(1em);
-	box-shadow: 1px 1px 15px -7px ;
+	box-shadow: 1px 1px 15px -7px;
 	margin-bottom: 20px;
 	height: 85px;
-	background-color: rgba(1, 1, 1, 0.05);
+	width: 100%;
+	background-color: rgba(221, 221, 221, 0.738);
 }
 
 img.logoImg {
@@ -71,8 +70,9 @@ img.logoImg {
 
 .navbar-toggler {
 	height: 50px;
-	border-radius: 10px;
+	border-radius: 15px;
 	border: none;
+	background-color: $success;
 }
 
 #navbarNavDropdown {
@@ -113,40 +113,46 @@ img.logoImg {
 // FIN DE NAVBAR
 
 // INICIO DE CONTENT
-#carouselExampleCaptions {
-	border-radius: 15px;
+#content {
+	margin-top: 105px;
 
-
-	.carousel-inner {
+	#carouselExampleCaptions {
 		border-radius: 15px;
-		background-color: rgb(0, 0, 0);
-		height: 50vh;
 
-		.carousel-item {
+
+		.carousel-inner {
+			border-radius: 15px;
+			background-color: rgb(0, 0, 0);
 			height: 50vh;
 
-			& img {
-				opacity: 0.7;
-				margin: auto;
-			}
+			.carousel-item {
+				height: 50vh;
 
-			div.carousel-caption {
-				h5 {
-					color: $success;
-					font-size: 2rem;
-					font-weight: 700;
-					text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+				& img {
+					opacity: 0.7;
+					margin: auto;
 				}
 
-				p {
-					font-weight: 300;
-					font-size: 0.8rem;
-					text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+				div.carousel-caption {
+					h5 {
+						color: $success;
+						font-size: 2rem;
+						font-weight: 700;
+						text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+					}
+
+					p {
+						font-weight: 300;
+						font-size: 0.8rem;
+						text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+					}
 				}
 			}
 		}
 	}
 }
+
+
 
 // FIN DE CONTENT
 
@@ -240,7 +246,7 @@ img.logoImg {
 @media all and (min-width: 768px) {
 
 	// INICIO DE CONTENT
-	}
+}
 
 // FIN DE CONTENT
 
